@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 /* Copy this command on the terminal. It will generate an access token */
 // curl -d "grant_type=client_credentials&client_id=z2A29HxoG5nr55LKkr3Pnfd31bUXKuNmTihc8HmjQ4H7axjm1T&client_secret=kQtviuIal5S01ujllezHZFcAYthkOaatpPZSy22S" https://api.petfinder.com/v2/oauth2/token
@@ -8,22 +8,54 @@ import React from 'react';
 /* The access token is put below in the header after the word Bearer to make a get request*/
 
 function AnimalData() {
+  const [animals, setAnimals] = useState([])
+  useEffect(() => {
+    let accessT = localStorage.getItem("token")
+  const endpoint = `https://api.petfinder.com/v2/animals`;
 
-  fetch ("https://api.petfinder.com/v2/animals", 
-  {
-    method: "GET",
-    headers: {
-      "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ6MkEyOUh4b0c1bnI1NUxLa3IzUG5mZDMxYlVYS3VObVRpaGM4SG1qUTRIN2F4am0xVCIsImp0aSI6ImVhYmRjMTZkYmMyYzQ0MGY0N2JlOGZlYTIzODc2NDFhMDFjOGUwODY4ZThmZjRjZmEzN2Y4MTk2YjE3Yjk2NTExZjZhNjVmOTU5ZmUzY2UzIiwiaWF0IjoxNjc0NjM0OTUzLCJuYmYiOjE2NzQ2MzQ5NTMsImV4cCI6MTY3NDYzODU1Mywic3ViIjoiIiwic2NvcGVzIjpbXX0.EopBdBkBhF3iuazKyII6IQV7rKEsqSdyDAPk9OcD26YSItJ6KVw2VlBHse4q9Jhmkib5FNJfJjmr32w6HZG9yhABaXuZx2ypiAMa3l0GasigdsTC3etSnvElydlFOz0JUXE8sznLKlSgzsioS_-ROkpxbXJ1IVnB-ReigqZt2SWUeIo7Tel1QLzk9E477bGmqk8OfD2xXu05slKajQ4mZ7mvcvg8Hxqx4zs8PdxE_gQzKJFTfvlhw31lZUn6g55nFwY5YwxTT7k2jEx3CdSkXF_RUVXw-QG5tRm-PZ5GX2JtKJTfy7S8E9bQT7BaO-N3hEJ6jZZ3mawscXDz_thpMQ"
-    }
+    fetch(endpoint, { 
+      method: "GET", headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      // Authorization: `Bearer ${accessT}}`,
+      "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJ6MkEyOUh4b0c1bnI1NUxLa3IzUG5mZDMxYlVYS3VObVRpaGM4SG1qUTRIN2F4am0xVCIsImp0aSI6IjQ2YjdkM2UwMmRjMDlhNTVkZjM3NmZkZTU2NGUzMTEwMjFmMTM3MGY1OWMwZjgzMGI5ZDQzYmRlZTA3YmUzOGQxZWM5NDQzNjJiZWFmZjM5IiwiaWF0IjoxNjc0NjUxOTc1LCJuYmYiOjE2NzQ2NTE5NzUsImV4cCI6MTY3NDY1NTU3NSwic3ViIjoiIiwic2NvcGVzIjpbXX0.Y2R0D6vCwVsbsFxQ8-VBMSveT8YddaS2DtIQRUTP_AVCo6WQdg8iUZ-TveSd7RJu87qqwIg4DMwRPHCqZ6NKtQqAlCvSQs2Pd7GO-wEollO854iY1gx4vR7SQqLQVSKpSOKivZ9SXdKRY5RCHL6xl0rf4y8QC84Qi5vIt_dCxnzBHqLdZ8NlWNZ1MsRWYBh_FeZnVoS1qV6nIhO1n6iM1OxWDJRdRcsvrH8MXlTZDSCOY8udgCsUVTWrC93LcM9vgOJj70yu_PdlJaG-DWUa4Svg5KeUoiTa608kOrLe5haQn91mDGwUXKLhLrBA0ohP_7Jxbdd61t2cgkvMD7jNgg",
+
+    } })
+    .then((response) => response.json())
+    .then((data) => { 
+      // let myAnimals = data.animals
+      setAnimals(data.animals)
+     console.log(data.animals);
+      // Extract access_token from data
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+  }, [])
+  const list = animals.map((animal) => {
+    return (
+
+      <div key={animal.id}>
+        <h1>{animal.type}</h1>
+        <h3>{animals.breeds.map((breed) => <>{breed.primary}</>)}</h3>
+        <p>{animal.name}</p>
+        <p>{animal.age}</p>
+        <p>{animal.gender}</p>
+       
+        {animal.photos.map((pic) => <img src={pic.small} alt=""/>)}
+        <>{animals.colors.map((color) => <p>{color.primary}</p>)}</>
+        {animal.contact.map((contacts) => 
+        <p>{contacts.address.map((adresses) => <>{adresses.country}</>)}</p>)}
+        {animal.contact.map((emails) => 
+        <>{emails.email}</>)}
+      </div>
+    )
   })
-  .then(r => r.json())
-  .then(data => console.log(data))
-  return (
-    <div>
-     
-
-    </div>
-  );
-}
+  
+    return (
+      <div>
+        {list}
+      </div>
+    );
+  }
 
 export default AnimalData;
