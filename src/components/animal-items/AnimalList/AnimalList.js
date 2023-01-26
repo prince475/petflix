@@ -7,7 +7,7 @@ function AnimalList() {
 
   useEffect(() => {
 
-  fetch ("https://api.npoint.io/ad8fa9154a4336a9f6ff")
+  fetch ("https://api.npoint.io/61de2641c6b0c40684e2")
   .then((r) => r.json())
   .then(data => {
     setAnimals(data)
@@ -19,7 +19,7 @@ function AnimalList() {
   const details = animals.map((animal) => {
     return (
       
-       <div className="card">
+       <div >
           <div className="pets">
             <div key={animal.id} >
                 <div className="pet">
@@ -29,10 +29,10 @@ function AnimalList() {
                 <div className="name">
                       <h3>{animal.name}</h3>
                 </div>
-                <>
+               
                     <h4>{animal.age}</h4> 
                     <h4>{animal.breeds.primary}</h4>
-                </>
+                
             </div>
           </div>
         </div> 
