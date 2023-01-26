@@ -3,6 +3,8 @@
     margin: 0;
     background-color: var(--BodyColor);
     box-sizing: border-box;
+    width:auto;
+    
     
   }
 
@@ -11,26 +13,21 @@ body{
     min-height: 100vh;
     display: grid;
     place-items: center;
-}
-
-.card{
-    grid-column-gap: 16px;
-    margin: 20px;
-    outline: none;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-/*-.pets{
     display: grid;
-    grid-template-columns: (auto auto auto auto);
-    justify-content: center;
-    grid-column-gap: 16px;
-    flex-wrap: wrap;
-    gap: 40px;
 }
---*/
+
+
+.pets{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 16px;
+    gap: 40px;
+    padding: 10px;
+    
+    
+
+}
+
 
 .pet{
     
@@ -43,17 +40,15 @@ body{
     flex-direction: column;
     padding: 20px 20px 40px;
     border-radius: 10px;
-    transition: .3s
+    transition: .3s;
+    float: left;
 }
 .pet:hover{
     transform: translateY(-15px);
     box-shadow:0 5px 10px rgba(0, 0, 0, .3);
 }
 
-img{
-   height: auto;
 
-}
 
 .name{
     width: 100%;
@@ -74,4 +69,7 @@ h4{
     font-size: 18px;
     font-weight: 500;
 }
+
+
+
 
