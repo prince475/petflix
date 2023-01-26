@@ -11,7 +11,7 @@ body{
 }
 h1{
     font-family:'Gloria Hallelujah', cursive;
-    color: var(--SixthColor);
+    color: var(--SecondColor);
     font-size: 3rem;
 }
 
