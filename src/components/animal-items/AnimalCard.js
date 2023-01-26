@@ -1,16 +1,35 @@
 import React from "react";
 
-export default function AnimalCard({animals}) {
+export default function AnimalCard({type, photos, breeds, name, age, gender, color, country, email, url }) {
+
+    // function colorItems() {
+    //     let colors = {}
+    //     if (colors === color) {
+    //         return <p>Color: {color}</p>
+    //     }
+    //     else {
+    //         return null
+    //     }
+    // }
+
     return (
-    <div className="col-3 p-1">
-        <div className="card h-100">
-            {animals.photos.map((pic) => <img className="card-img-top" src={pic.small} alt="animal image" />)}
+    <div className="card p-1">
+        <div className="col h-100">
+        <img src={photos} alt=""/>
+        <h1>{type}</h1>
             <div className="card-body">
-                <h2 className="card-title">{animals.breeds.map((breed) => <>{breed.primary}</>)}</h2>
-                <p className="card-text">{animals.age}</p>
-                <>{animals.colors.map((color) => <p>{color.primary}</p>)}</>
-              
+                <h2 className="card-title">Breed: {breeds}</h2>
+                <p>Name: {name}</p>
+                <p className="card-text">Age: {age}</p>
+                <p>Gender: {gender}</p>
+                {color}
             </div>
+            <div>
+                <h2>Contact:</h2>
+                <p>Country: {country}</p>
+                <p>Email: {email}</p>
+            </div>
+            <a href={url}>ADOPT</a>
         </div>
     </div>
     )
