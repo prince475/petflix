@@ -1,11 +1,11 @@
 import React from 'react';
-import AnimalOrganization from './components/organization-items/AnimalOrganizationList';
-import './App.css';
+// import AnimalOrganizationData from './components/organization-items/AnimalOrganizationData';
+import AnimalOrganizationList from './components/organization-items/AnimalOrganizationList';
 
 function App() {
   return (
     <div className="App">
-      <AnimalOrganization />
+      <AnimalOrganizationList />
     </div>
   );
 }
