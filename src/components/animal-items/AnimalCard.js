@@ -2,15 +2,6 @@ import React from "react";
 
 export default function AnimalCard({type, photos, breeds, name, age, gender, color, country, email, url }) {
 
-    // function colorItems() {
-    //     let colors = {}
-    //     if (colors === color) {
-    //         return <p>Color: {color}</p>
-    //     }
-    //     else {
-    //         return null
-    //     }
-    // }
 
     return (
     <div className="card p-1">
