@@ -2,41 +2,43 @@ import React from "react";
 import './AnimalCard.css'
 
 export default function AnimalCard({type, photos, breeds, name, age, gender, color, country, email, attributes, coat,description, environChildren, tags, size, status }) {
-
+   
 
     return (
-<div className="intro">
-    <div className="card">
-        <div className="i-left">
-            <div>
-                <img className="pet-img" src={photos} alt="{Image}"/>
-            </div>
-            <div className="i-right">
-                <div className="pet-listing">
-                    <h1>{type}</h1>
-                    <p className="card-title"><span className="title_start">Breed:</span><span className="title_end p-2">{breeds}</span></p>
-                    <p className="card-text"><span className="title_start">Name:</span><span className="title_end p-2">{name}</span></p>
-                    <p className="card-text"><span className="title_start">Age:</span><span className="title_end p-2">{age}</span></p>
-                    <p className="card-text"><span className="title_start">Gender:</span><span className="title_end p-2">{gender}</span></p>
-                    <p className="card-text"><span className="title_start">Size:</span><span className="title_end p-2">{size}</span></p>
-                    <p className="card-text"><span className="title_start">Color:</span><span className="title_end p-2">{color}</span></p>
-                    <p className="card-text"><span className="title_start">Coat:</span><span className="title_end p-2">{coat}</span></p>
+                <div className="container">
+                    <div className="card">
+                        <div className="card-left">
+                            <div>
+                                <img className="pet-img" src={photos} alt="{Image}"/>
+                            </div>
+                            <div className="card-right">
+                                <div className="pet-listing">
+                                    {/*<h1>{type}</h1>*/}
+                                    <p className="card-text"><span className="title_start"></span><span className="title">{name}</span></p>
+                                    <p className="card-title"><span className="title_start">Breed:</span><span className="title_end p-2">{breeds}</span></p>
+                                
+                                    {/*<p className="card-text"><span className="title_start">Age:</span><span className="title_end p-2">{age}</span></p>
+                                    <p className="card-text"><span className="title_start">Gender:</span><span className="title_end p-2">{gender}</span></p>
+                                    <p className="card-text"><span className="title_start">Size:</span><span className="title_end p-2">{size}</span></p>
+                                    <p className="card-text"><span className="title_start">Color:</span><span className="title_end p-2">{color}</span></p>*/}
+                                    <p className="card-text"><span className="title_start">Coat:</span><span className="title_end p-2">{coat}</span></p>
 
-                        <ul>attribute:{attributes}</ul>
+                                        {/*<ul>attribute:{attributes}</ul>*/}
 
-                        <p>{description}</p>
-                        <ul>{environChildren}</ul>
-                        <u>Characteristics</u>
-                        <>{tags}</>
+                        <p className="description">{description}</p>
+                        {/*<ul>{environChildren}</ul>*/}
+                        <h6><u>Characteristics</u></h6>
+                        <ul>{tags}</ul>
                 <div>
-                    <h2><u id="contact">Contact:</u></h2>
-                    <p><span className="title_start">Country:</span><span className="title_end p-2">{country}</span></p>
-                    <p><span className="title_start">Email:</span><span className="title_end p-2">{email}</span></p>
+                    <h6><u id="contact">Contact:</u></h6>
+                    
+                    <p><span className="title_start">Country:</span><span className="country">{country}</span></p>
+                    <p><span className="title_start">Email:</span><span className="email">{email}</span></p>
                 </div>
             </div>
             </div>
-           
-            <p className="card-text"><span className="title_start">Status:</span><span className="title_end p-2">{status}</span></p>
+            
+            <p className="card-text"><span className="title_start">Status:</span><span className="status">{status}</span></p>
             <button className="adoptBtn">ADOPT</button>
         </div>
     </div>
