@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import AnimalCard from "./AnimalCard/AnimalCard"
+import AnimalCard from "./AnimalCard"
 
 function AnimalData() {
   const [animals, setAnimals] = useState([])
 
-  const API = "https://api.npoint.io/ad8fa9154a4336a9f6ff"
+  const API = "https://api.npoint.io/61de2641c6b0c40684e2"
   useEffect(() => {
     fetch(API)
     .then((r) => r.json())
