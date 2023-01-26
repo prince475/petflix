@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes} from "react-router-dom"
+import { BrowserRouter, Route, Switch} from "react-router-dom"
 import Dashboard from '../dashboard/Dashboard';
 import Preference from '../preference/Prefrence';
 import Login from '../login/Login';
@@ -18,10 +18,10 @@ function App() {
     <div className='wrapper'>
       <h1>Appliction</h1>
       <BrowserRouter>
-        <Routes>
+        <Switch>
           <Route path="/dashboard"> <Dashboard/> </Route>
           <Route path="/preference"> <Preference/> </Route>
-        </Routes>
+        </Switch>
       </BrowserRouter>
     </div>
   );
