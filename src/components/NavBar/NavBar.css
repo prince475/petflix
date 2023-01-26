@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Gloria+Hallelujah&family=Poppins&display=swap');
+
+/*--Navbar--*/
+.n-wrapper {
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.n-left {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+}
+
+.n-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--FirstColor);
+  letter-spacing: 2px;
+  font-family: 'Gloria Hallelujah', cursive;
+  
+}
+
+.n-right {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.n-list{
+  flex:10;
+}
+
+
+.n-list>ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 4rem;
+  color: var(--SecondColor);
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.n-list>ul>li:hover {
+  cursor: pointer;
+  color: var(--FirstColor);
+}
+
+.login-btn{
+  color: var(--FirstColor);
+  outline:none;
+  font-size: 2rem;
+  
+}
+/*--Search Function--*/
+
+input[type="text"]{
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size:14px;
+  border-radius: 25px;
+  border-color: var(--FirstColor);
+}
+
+button[type="submit"] {
+  color: var(--SecondColor);
+  font-size: 2rem;
+  padding: 10px 10px 10px 10px;
+  border: none;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  color: var(--FirstColor);
+  
+}
+
+button[type="login"] {
+  color: var(--FirstColor);
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="login"]:hover {
+  color: var(--SecondColor);
+  
+}
+
+/*--Link part--*/
+.active-link {
+  color: var(--FirstColor);
+  font-weight: bold;
+}
+
+li{
+  color: var(--SecondColor)
+}
+
+li:hover{
+  color: var(--FirstColor)
+}
