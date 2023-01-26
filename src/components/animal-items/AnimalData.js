@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import AnimalCard from "./AnimalCard"
+import AnimalCard from "./AnimalCard/AnimalCard"
 
 function AnimalData() {
   const [animals, setAnimals] = useState([])

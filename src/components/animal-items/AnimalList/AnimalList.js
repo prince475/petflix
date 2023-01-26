@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import "./AnimalList.css"
 
 function AnimalList() {
 
@@ -13,18 +14,39 @@ function AnimalList() {
     console.log(data)
   })
   }, [])
+  
 
   const details = animals.map((animal) => {
     return (
-      <div key={animal.id} className="col-3 p-1">
-        <div className="card h-100">
-            <img className="card-img-top" src={animal.photos.map((pic) => pic.small)} alt="{animal image}"/>
-            <div>{animal.name}</div>
-            <>{animal.age} . {animal.breeds.primary}</>
-        </div>
-  </div>
-    )
-  })
+      
+       <div className="card">
+          <div className="pets">
+            <div key={animal.id} >
+                <div className="pet">
+                    <div className="image" >
+                          <img  className="card-img" src={animal.photos.map((pic) => pic.small)} alt="{animal image}"/>
+                    </div>
+                <div className="name">
+                      <h3>{animal.name}</h3>
+                </div>
+                <>
+                    <h4>{animal.age}</h4> 
+                    <h4>{animal.breeds.primary}</h4>
+                </>
+            </div>
+          </div>
+        </div> 
+      </div>
+       
+
+
+   
+     
+  
+  )
+})  
+
+
 
 
       return (

@@ -1,33 +1,103 @@
-.title_start{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font: bolder;
+* {
+    padding: 1px;
+    margin: 0;
+    background-color: var(--BodyColor);
+    box-sizing: border-box;
     
-}
-.title_end{
-    /* font-family: cursive; */
-    color: beige;
-}
-
-.card{
-    /* text-align: -webkit-center; */
-    background-color: darksalmon;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* font-size: 20px;
-    padding: 10px; */
-}
+  }
 
 
-.adoptBtn:hover{
-    cursor: pointer;
+body{
+    background-color: var(--BodyColor);
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-.adoptBtn{
-    background-color: #191817; /* Green */
-    border: none;
-    border-radius: 8px;
+
+.pet{
+    position: relative;
+    min-width: 350px;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-- .pet-img{
+    
+    background: #fff;
+    position: relative;
+}
+.pet-listing{
+    width: 60%;
+    height: auto;
+    background: var(--SixthColor);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    color: var(--FifthColor);
+
+
+} --*/
+
+button{
+    background-color: var(--FirstColor);
     color: white;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 28px;
+    height: 45px;
+    width: 130px;
+    margin-top: -0.8rem;
+
+}
+
+button:hover{
+    background-color:var(--SecondColor);
+    transform: scale(1.1);
+}
+
+h1{
+    color: var(--FirstColor)
+}
+
+p .title_start{
+    color: var(--ThirdColor);
+    font-weight: 600;
+}
+p .title_end{
+    color: var(--SecondColor)
+}
+ul{
+    color: var(--ThirdColor);
+    font-weight: bold;
+
+}
+u{
+    color: var(--FirstColor)
+}
+
+.i-left{
+    display: flex;
+    height: 77vh;
+    margin-top:6rem;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.i.right{
+    flex:1;
+    position: relative;
+}
+
+.intro{
+    display: flex;
+    height: 77vh;
+    margin-top: 6rem;
 }
