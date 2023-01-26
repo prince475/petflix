@@ -21,7 +21,7 @@ export default function AnimalCard({type, photos, breeds, name, age, gender, col
                                     <p className="card-text"><span className="title_start">Gender:</span><span className="title_end p-2">{gender}</span></p>
                                     <p className="card-text"><span className="title_start">Size:</span><span className="title_end p-2">{size}</span></p>
                                     <p className="card-text"><span className="title_start">Color:</span><span className="title_end p-2">{color}</span></p>*/}
-                                    <p className="card-text"><span className="title_start">Coat:</span><span className="title_end p-2">{coat}</span></p>
+                                    <p className="card-text"><span className="title_start">Gender:</span><span className="title_end p-2">{gender}</span></p>
 
                                         {/*<ul>attribute:{attributes}</ul>*/}
 
