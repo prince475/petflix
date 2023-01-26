@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css"
 
+
 export default function Login({setToken}) {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState()
@@ -28,20 +29,36 @@ export default function Login({setToken}) {
 
     return (
         <div className="login-wrapper">
-            <h1>Please Log In</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    <p>Username</p>
-                    <input type="text" onChange={handleUsername}/>
-                </label>
-                <label>
-                    <p>Password</p>
-                    <input type="password" onChange={handlePassword}/>
-                </label>
-                <div>
-                    <button type="submit">Submit</button>
+            <h1>Petflix</h1>
+            <div className="card">
+                <div className="i-left">
+                    <div>
+                        <img src ="https://ouch-cdn2.icons8.com/Q_OjCVXGw8kIpafKhKOhv4BXE2ovEdo1GQfDJ-S39pE/rs:fit:256:193/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTAz/LzZlMDFkMjc3LTZm/ZmItNGIxNS1iZGRl/LWEyNzdlMzg4NzIx/ZS5wbmc.png" alt="person with dog"/>
+                    </div>
+
+                    <div className="i-right">
+                    <form onSubmit={handleSubmit}>
+                        <p>Login</p>
+                            <input 
+                            type="text" 
+                            onChange={handleUsername}
+                            placeholder="Username"
+                            
+                            />
+                            
+                            <input 
+                            type="password" 
+                            onChange={handlePassword}
+                            placeholder="Password"
+                            
+                            />
+                    
+                        <button type="submit">Login</button>
+                        </form>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
+            
     )
 }
