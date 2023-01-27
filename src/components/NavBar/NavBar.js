@@ -5,6 +5,7 @@ import {IoMdPaw} from "react-icons/io"
 import {AiOutlineSearch} from "react-icons/ai"
 import {BsFillPersonFill} from "react-icons/bs"
 
+
 function NavBar(){
   //store value of the search input
   const [searchValue, setSearchValue] = useState("");
@@ -14,7 +15,7 @@ function NavBar(){
   }
   
   return(
-    <div className="n-wwrapper">
+    <div className="wrapper">
       <div className="n-left">
         <div className="n-name"><IoMdPaw/>Petflix</div>
       

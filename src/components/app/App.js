@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
 import { BrowserRouter, Route, Switch} from "react-router-dom"
-import Dashboard from '../dashboard/Dashboard';
-import Preference from '../preference/Prefrence';
 import Login from '../login/Login';
+import Home from '../Home/Home';
+import NavBar from '../NavBar/NavBar';
+
 
 
 function App() {
@@ -16,11 +17,12 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <h1>Appliction</h1>
+      <h1>Petflix</h1>
       <BrowserRouter>
         <Switch>
-          <Route path="/dashboard"> <Dashboard/> </Route>
-          <Route path="/preference"> <Preference/> </Route>
+          <Route path="/"> <Home /> </Route>
+          <Route path="/"> <NavBar /> </Route>
+
         </Switch>
       </BrowserRouter>
     </div>
