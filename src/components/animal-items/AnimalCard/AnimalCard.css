@@ -1,0 +1,148 @@
+* {
+    padding: 1px;
+    margin: 0;
+    box-sizing: border-box;
+    
+    
+  }
+
+
+body{
+    background-color: var(--FirstColor);
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+
+.pet{
+    position: relative;
+    min-width: 350px;
+    min-height: 500px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.adoptBtn{
+    background-color: var(--SecondColor);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 28px;
+    height: 45px;
+    width: 130px;
+    margin-top: -0.8rem;
+
+}
+
+button:hover{
+    background-color:var(--FirstColor);
+    transform: scale(1.1);
+}
+
+h1{
+    color: var(--FirstColor)
+}
+
+p .title_start{
+    color: var(--ThirdColor);
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: -2rem;
+}
+p .title_end{
+    color: var(--SecondColor);
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: -2rem;
+
+}
+.description{
+    font-size:10px;
+}
+.title{
+    color: var(--FirstColor);
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.title_start{
+    color: var(--ThirdColor);
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: -2rem;
+
+}
+.country{
+    color: var(--SecondColor);
+    font-weight: 600;
+    font-size:15px;
+}
+.email{
+    color: var(--SecondColor);
+    font-weight: 600;
+    font-size:15px;
+}
+
+ul{
+    
+    color: var(--ThirdColor);
+    font-weight: 600;
+    font-size:16px;
+    display: inline-block;
+    overflow: auto;
+
+}
+u{
+    color: var(--FirstColor)
+}
+
+
+img{
+    height: 300px;
+    border-radius: 8px;
+    padding: -3rem;
+}
+
+.card{
+    
+    background-color: white;
+    max-width: 50em;
+    margin-top: 1em;
+    margin-left: 2em;
+    padding: 3em;
+    border-radius: 18px;
+    box-shadow: 1em 1em 6em rgba(243, 166, 107, 0.8);
+
+}
+
+.card:hover{
+    transform: scale(0.5.1);
+}
+
+
+
+h6{
+    color: var(--FirstColor);
+    font-weight: 600;
+}
+.description{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--SecondColor);
+}
+
+.status{
+    color: var(--FirstColor);
+    font-weight: 600;
+}
