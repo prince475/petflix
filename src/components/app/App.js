@@ -17,13 +17,15 @@ function App() {
 
   return (
     <div className='wrapper'>
-      <h1>Petflix</h1>
+      {/* <h1>Petflix</h1> */}
       <BrowserRouter>
-        <Switch>
+      <NavBar  />
+      <Switch>
+          {/* <Route path="/"> <NavBar /> </Route> */}
           <Route path="/"> <Home /> </Route>
-          <Route path="/"> <NavBar /> </Route>
 
         </Switch>
+        
       </BrowserRouter>
     </div>
   );
