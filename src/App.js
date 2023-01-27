@@ -1,4 +1,9 @@
 import React from 'react';
+import AnimalOrganizationData from './components/organization-items/AnimalOrganizationData';
+//import AnimalOrganizationList from './components/organization-items/AnimalOrganizationList';
+import './App.css'
+
+import React from 'react';
 //import AnimalData from './components/animal-items/AnimalCard/AnimalData';
 // import Test from './components/Test';
 import AnimalList from './components/animal-items/AnimalList/AnimalList';
@@ -14,6 +19,7 @@ function App() {
     <div className="App">
       <AnimalList />
       {/* <AnimalData /> */}
+      <AnimalOrganizationData />
     </div>
   );
 }
