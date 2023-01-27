@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins","Crafty Girls Family", sans-serif;
+  
+}
+/*--Colors--*/
+:root{
+  --FirstColor: #ef6817;
+  --SecondColor: #5f605d;
+  --ThirdColor: #383838;
+  --FourthColor: #F7FBFF; 
+  --FifthColor: #d1cdca;
+  --SixthColor: #edebe8;
+  --SeventhColor: #e7f2f9;
+  --BodyColor: #F6FBFE;
+}
+body{
+  background: var(--BodyColor);
+}
+
