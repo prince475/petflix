@@ -17,7 +17,7 @@ body{
 }
 
 #visitBtn{
-    background-color: var(--FirstColor);
+    background-color: var(--SecondColor);
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -29,6 +29,9 @@ body{
     border-radius: 28px;
     align-items: center;
 }
+ #visitBtn:hover{
+    background-color: var(--FirstColor);
+ }
 
 .card{
     background-color: white;
