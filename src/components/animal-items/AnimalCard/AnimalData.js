@@ -18,21 +18,14 @@ function AnimalData() {
         return (
           <AnimalCard   
           key={animal.id}
-          attributes={animal.attributes.house_trained}
-          type={animal.type} 
-          coat={animal.coat}
           breeds={animal.breeds.primary} 
           name={animal.name} 
-          age={animal.age}
           gender={animal.gender}
           photos={animal.photos.map((pic) => pic.medium)}
-          color={animal.colors.primary}
           country={animal.contact.address.country}
           email={animal.contact.email}
           description={animal.description}
-          environChildren={animal.environment.dogs}
           tags={animal.tags.map((tag) => <ol key={tag}>{tag}</ol>)}
-          size={animal.size}
           status={animal.status}
           /> 
   )

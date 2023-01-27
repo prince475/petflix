@@ -1,7 +1,7 @@
 import React from "react";
 import './AnimalCard.css'
 
-export default function AnimalCard({type, photos, breeds, name, age, gender, color, country, email, attributes, coat,description, environChildren, tags, size, status }) {
+export default function AnimalCard({photos, breeds, name, gender, country, email, description, tags, status }) {
    
 
     return (
@@ -15,18 +15,12 @@ export default function AnimalCard({type, photos, breeds, name, age, gender, col
                                 <div className="pet-listing">
                                     {/*<h1>{type}</h1>*/}
                                     <p className="card-text"><span className="title_start"></span><span className="title">{name}</span></p>
-                                    <p className="card-title"><span className="title_start">Breed:</span><span className="title_end p-2">{breeds}</span></p>
-                                
-                                    {/*<p className="card-text"><span className="title_start">Age:</span><span className="title_end p-2">{age}</span></p>
-                                    <p className="card-text"><span className="title_start">Gender:</span><span className="title_end p-2">{gender}</span></p>
-                                    <p className="card-text"><span className="title_start">Size:</span><span className="title_end p-2">{size}</span></p>
-                                    <p className="card-text"><span className="title_start">Color:</span><span className="title_end p-2">{color}</span></p>*/}
-                                    <p className="card-text"><span className="title_start">Gender:</span><span className="title_end p-2">{gender}</span></p>
 
-                                        {/*<ul>attribute:{attributes}</ul>*/}
+                                    <p className="card-title"><span className="title_start">Breed:</span><span className="title_end p-2">{breeds}</span></p>
+
+                                    <p className="card-text"><span className="title_start">Gender:</span><span className="title_end p-2">{gender}</span></p>
 
                         <p className="description">{description}</p>
-                        {/*<ul>{environChildren}</ul>*/}
                         <h6><u>Characteristics</u></h6>
                         <ul>{tags}</ul>
                 <div>
