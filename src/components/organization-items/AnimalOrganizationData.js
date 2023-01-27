@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import AnimalOrganizationDetails from "./AnimalOrganizationDetails";
+import './Organization.css'
 
 function AnimalOrganizationData() {
 
@@ -7,7 +8,7 @@ function AnimalOrganizationData() {
 
     useEffect(() => {
   
-    fetch ("https://api.npoint.io/ad8fa9154a4336a9f6ff")
+    fetch ("https://api.npoint.io/818b301731f17cde4a52")
     .then((r) => r.json())
     .then(data => {
       setOrganizations(data)

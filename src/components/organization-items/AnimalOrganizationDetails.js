@@ -1,11 +1,12 @@
 import React from "react";
+import './Organization.css'
 
-function AnimalOrganizationDetails({name, email, phone, city, state, postcode, country, url, photos, animalLink, selfLink}) {
+
+function AnimalOrganizationDetails({name, email, phone, city, state, postcode, country, url, animalLink, selfLink}) {
 
     return (
         <div className="col-12 p-1">
             <div className="card h-100">
-                <img className="card-img-top" src={photos} alt="{organaziation image}"/>
                 <div className="card-body">
                     <h1 className="card-title">{name}</h1>
 
@@ -25,10 +26,9 @@ function AnimalOrganizationDetails({name, email, phone, city, state, postcode, c
 
                     <p><span className="title_start">Country:</span><span className="title_end p-2">{country}</span></p>
 
-                    <button id="visitBtn"><a href={url}>VISIT..</a></button>
+                    <button id="visitBtn"><a href={url}>VISIT</a></button>
                     
-                    <a href={animalLink}>Animals Link</a>
-                    <a href={selfLink}>Self Link</a>
+                    
                 </div>
             </div>
         </div>

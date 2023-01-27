@@ -37,6 +37,7 @@
 
 
 import React, {useState, useEffect} from "react";
+import './Organization.css'
 
 function AnimalOrganizationList() {
 
@@ -44,7 +45,7 @@ function AnimalOrganizationList() {
 
     useEffect(() => {
   
-    fetch ("https://api.petfinder.com/v2/organizations", 
+    fetch ("https://api.npoint.io/818b301731f17cde4a52", 
     {
       method: "GET",
       headers: {
