@@ -13,7 +13,6 @@ export default function AnimalCard({photos, breeds, name, gender, country, email
                             </div>
                             <div className="card-right">
                                 <div className="pet-listing">
-                                    {/*<h1>{type}</h1>*/}
                                     <p className="card-text"><span className="title_start"></span><span className="title">{name}</span></p>
 
                                     <p className="card-title"><span className="title_start">Breed:</span><span className="title_end p-2">{breeds}</span></p>

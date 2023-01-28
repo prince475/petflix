@@ -14,12 +14,12 @@ const Home= () => {
                         <span> Life is better with pets</span>
 
                     </div>
-                    <button className="button i-button">Find a Pet</button>
+                    <button className="button i-button" id="home-btn">Find a Pet</button>
                  
             
                 </div>
                 <div className="i-right">
-                <img src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=600" alt="dog" />
+                <img id="home-img" src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=600" alt="dog" />
                 
                 </div>
             </div>

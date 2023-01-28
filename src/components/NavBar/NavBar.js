@@ -21,14 +21,23 @@ function NavBar(){
       
     <div className="n-right"></div>
       <div className="n-list">
-
-      <ul style={{listStyleType:'none'}}>
-          <NavLink to="/" exact activeClassName="active-link"><li>Home</li></NavLink>
-          <NavLink to="/animals" exact activeClassName="active-link"><li>Animals</li></NavLink>
-          <NavLink to="/organization" exact activeClassName="active-link"><li>Organization</li></NavLink>
-          <NavLink to="/type" exact activeClassName="active-link"><li>Type</li></NavLink>
-          
-      </ul>
+        <ul style={{listStyleType:'none'}}>
+          <li>
+            <NavLink to="/" exact activeClassName="active-link">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/animals" exact activeClassName="active-link">Animals</NavLink>
+          </li>
+          <li>
+            <NavLink to="/organization" exact activeClassName="active-link">Organization</NavLink>
+          </li>
+          <li>
+            <NavLink to="/card" activeClassName="active-link">Card</NavLink>
+          </li>
+          <li>
+            <NavLink to="/type" exact activeClassName="active-link">Type</NavLink>
+          </li>
+        </ul>
       </div>
       <form>
         <input
@@ -47,3 +56,4 @@ function NavBar(){
   )
 }
 export default NavBar
+
