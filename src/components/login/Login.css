@@ -7,6 +7,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
    
 }
 h1{
@@ -15,27 +16,65 @@ h1{
     font-size: 3rem;
 }
 
+p{
+  font-size: 25px;
+  color: var(--FirstColor);
+  font-weight: 600;
+}
+
+.j-left{
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  gap: 2rem;
+}
+.j-right {
+flex: 1;
+position: relative;
+}
+
 /*--Input part--*/
-input{
+.login-name{
     background: var(--SixthColor);
     border-radius: 8px;
     padding: 10px 15px;
     border: 8px;
     margin: 8px 0;
     margin-bottom: 1em;
-    width: 100%;
+    width: 20rem;
     font-family: inherit;
     color: var(--SecondColor);
-    font-size: inherit
+    font-size: 12px;
 }
 
-input:focus{
+.login-name:focus{
     outline-color: var(--FirstColor);
     transition: transform 0.2s ease-in-out;
     transform: scale(1.1);
   
   }
-button{
+
+.login-password{
+    background: var(--SixthColor);
+    border-radius: 28px;
+    padding: 10px 15px;
+    border: 8px;
+    margin: 8px 0;
+    margin-bottom: 1em;
+    width: 70%;
+    font-family: inherit;
+    color: var(--SecondColor);
+    font-size: 15px;
+}
+
+.login-password:focus{
+    outline-color: var(--FirstColor);
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.1);
+  
+  }
+/*--.login-btn{
     background: var(--FirstColor);
     border: none;
     border-radius: 28px;
@@ -52,22 +91,43 @@ button{
    
   }
   
-button:hover{
+.login-btn:hover{
     background: var(--SecondColor);
     transform: scale(1.1);
-  }
+  } --*/
 
-.card{
+.l-btn{
+  background: var(--FirstColor);
+  color:#fff;
+  font-family: inherit;
+  border-radius: 28px;
+  padding: 12px 40px;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  box-shadow: 1em 2em 2.5em rgba(1, 1, 50, 0.1);
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: 1px;
+
+
+}
+
+.l-btn:hover{
+  background: var(--SecondColor);
+  transform: scale(1.1);
+} 
+
+/*--Card--*/
+
+.login-card{
     background-color: var(--BodyColor);
     max-width: 25em;  
     margin-top: 1em;
     margin-left: 2em;
     padding: 3em;
     border-radius: 18px;
-    box-shadow: 1em 2em 2.5em rgba(1, 1, 50, 0.1);
-    
-    
-    
+    box-shadow: 1em 2em 2.5em rgba(225, 109, 42, 0.1);   
 }
 
 .card:hover{
@@ -75,28 +135,21 @@ button:hover{
   
 }
 
-p{
+.login-h1{
     color: var(--FirstColor);
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 2px;
+
 }
 
-.i-left{
-    display: flex;
-    position: relative;
-    flex: 1;
-    flex-direction: column;
-    gap: 2rem;
+
+/*--Image--*/
+
+#l-img{
+  height:150px;
 }
-.i-right {
-  flex: 1;
-  position: relative;
+#l-img:hover{
+  transform: scale(1.2); 
 }
 
-img{
-  height:100px;
-}
-img:hover{
-  transform: scale(1.3); 
-}
