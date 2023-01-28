@@ -21,7 +21,7 @@ function AnimalList() {
 
        <div>
             <div key={animal.id} >
-            <div className="pets">
+            <div className="animal-wrapper">
                 <div className="pet-list-card">
                     <div className="image" >
                           <img  className="petlist-img" src={animal.photos.map((pic) => pic.small)} alt="{animal image}"/>
