@@ -54,3 +54,59 @@ a{
 .btn:hover{
   background-color: var(--ThirdColor);
 } */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  
+}
+/*--Colors--*/
+:root{
+  --FirstColor: #ef6817;
+  --SecondColor: #5f605d;
+  --ThirdColor: #383838;
+  --FourthColor: #F7FBFF; 
+  --BodyColor: #F6FBFE;
+}
+body{
+  background: var(--BodyColor);
+}
+
+a{
+  text-decoration: none;
+}
+
+
+.icon{
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.grid{
+  display: grid;
+  align-items: center;
+}
+.btn{
+  padding: .6rem 1.5rem;
+  background: var(--FirstColor);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn a{
+  color: var(--SecondColor);
+  font-weight: 500;
+}
+
+.btn:hover{
+  background-color: var(--ThirdColor);
+}
+ 

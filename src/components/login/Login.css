@@ -142,6 +142,7 @@ position: relative;
 
 }
 
+<<<<<<< HEAD
 
 /*--Image--*/
 
@@ -151,3 +152,15 @@ position: relative;
 #l-img:hover{
   transform: scale(1.2); 
 }
+=======
+
+/*--Image--*/
+
+#l-img{
+  height:150px;
+}
+#l-img:hover{
+  transform: scale(1.2); 
+}
+
+>>>>>>> b8d7aa26f1a6ee22405737d2faad55af04a26529
