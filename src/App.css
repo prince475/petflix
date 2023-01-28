@@ -36,7 +36,6 @@ a{
   display: grid;
   align-items: center;
 }
-
 .btn{
   padding: .6rem 1.5rem;
   background: var(--FirstColor);
@@ -54,3 +53,4 @@ a{
 .btn:hover{
   background-color: var(--ThirdColor);
 }
+ 
