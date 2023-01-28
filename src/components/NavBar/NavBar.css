@@ -24,6 +24,7 @@
   
 }
 
+
 .n-right {
   display: flex;
   flex: 1;
@@ -69,40 +70,50 @@ input[type="text"]{
   border-color: var(--FirstColor);
 }
 
-button[type="submit"] {
-  color: var(--SecondColor);
-  font-size: 2rem;
-  padding: 10px 10px 10px 10px;
-  border: none;
-  cursor: pointer;
-}
-button[type="submit"]:hover {
+/*--icon button--*/
+
+.nav-search-btn{
   color: var(--FirstColor);
-  
+  border: none;
+  outline: none;
+  font-size: 25px;
+  background-color: transparent;
 }
 
-button[type="login"] {
-  color: var(--FirstColor);
-  font-size: 2rem;
-  border: none;
-  cursor: pointer;
+.nav-search-btn:hover{
+  color: var(--FirstColor)
 }
 
-button[type="login"]:hover {
-  color: var(--SecondColor);
-  
+.logout-btn{
+  color: var(--FirstColor);
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background-color: transparent;
 }
+
+.logout-btn:hover{
+  color: var(--SecondColor);
+  background-color: transparent;
+  border-radius: 28px;
+}
+
+
 
 /*--Link part--*/
 .active-link {
   color: var(--FirstColor);
   font-weight: bold;
+  background-color: transparent;
 }
 
-li{
-  color: var(--SecondColor)
+.active-link:hover{
+  color: var(--SecondColor);
+  background-color: transparent;
 }
 
-li:hover{
-  color: var(--FirstColor)
-}
+
+
+
+
+

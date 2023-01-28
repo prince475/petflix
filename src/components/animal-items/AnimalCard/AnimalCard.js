@@ -5,15 +5,15 @@ export default function AnimalCard({photos, breeds, name, gender, country, email
    
 
     return (
-                <div className="container">
+                <div>
                     <div className="card">
-                        <div className="card-left">
+                        <div>
                             <div>
                                 <img className="pet-img" src={photos} alt="{Image}"/>
                             </div>
                             <div className="card-right">
                                 <div className="pet-listing">
-                                    <p className="card-text"><span className="title_start"></span><span className="title">{name}</span></p>
+                                    <p className="card-text"><span className="title_start"></span><span className="animal-title">{name}</span></p>
 
                                     <p className="card-title"><span className="title_start">Breed:</span><span className="title_end p-2">{breeds}</span></p>
 

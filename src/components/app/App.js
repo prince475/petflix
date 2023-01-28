@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import { Route, Switch} from "react-router-dom"
 import Login from '../login/Login';
-import Home from '../home/Home';
-import NavBar from '../navBar/NavBar';
+import Home from '../Home/Home';
+import NavBar from '../NavBar/NavBar';
 import AnimalData from '../animal-items/AnimalCard/AnimalData';
 import AnimalList from '../animal-items/AnimalList/AnimalList';
 

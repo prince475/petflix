@@ -3,7 +3,7 @@ import './NavBar.css';
 import {NavLink} from "react-router-dom";
 import {IoMdPaw} from "react-icons/io"
 import {AiOutlineSearch} from "react-icons/ai"
-import {BsFillPersonFill} from "react-icons/bs"
+
 
 
 function NavBar(){
@@ -17,7 +17,7 @@ function NavBar(){
   return(
     <div className="wrapper">
       <div className="n-left">
-        <div className="n-name"><IoMdPaw/>Petflix</div>
+        <div className="n-name"><IoMdPaw id="paw"/>Petflix</div>
       
     <div className="n-right"></div>
       <div className="n-list">
@@ -46,9 +46,9 @@ function NavBar(){
         value={searchValue}
         onChange={handleSearch}
         />
-        <button type="submit"><AiOutlineSearch/></button>
+        <button className="nav-search-btn" type="submit"><AiOutlineSearch/></button>
       </form>
-       <button type="login"><BsFillPersonFill/></button>
+       <button className="logout-btn"type="logout">Logout</button>
 
       </div>
     </div>

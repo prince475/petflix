@@ -1,5 +1,5 @@
 * {
-    padding: 1px;
+    padding: 0px;
     margin: 0;
     background-color: var(--BodyColor);
     box-sizing: border-box;
@@ -7,8 +7,7 @@
     
     
   }
-
-body{
+  body{
     background-color: var(--BodyColor);
     min-height: 100vh;
     display: grid;
@@ -16,41 +15,32 @@ body{
     display: grid;
 }
 
-
-.pets{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 16px;
-    gap: 40px;
-    padding: 10px;
-    
-    
-
-}
-
-
-.pet{
+.pet-list-card{
     
     position: relative;
     background-color: var(--FourthColor);
-    width: 350px;
-    height: 100%;
+    width: 20%;
+    height: 20%;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
     display: flex;
     flex-direction: column;
-    padding: 20px 20px 40px;
+    padding: 0px 10px 0px;
     border-radius: 10px;
     transition: .3s;
     float: left;
+    
+    
+    
 }
-.pet:hover{
+
+.pets:hover{
     transform: translateY(-15px);
     box-shadow:0 5px 10px rgba(0, 0, 0, .3);
 }
 
 
 
-.name{
+.pet-name{
     width: 100%;
     display: flex;
     
@@ -59,15 +49,22 @@ body{
 
 h3{
     color: var(--FirstColor);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     padding: 10px 0px 0px;
 }
 
 h4{
     color: var(--SecondColor);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
+}
+
+.petlist-img{
+    height: 350px;
+    width: 100%;
+    border-radius: 15px;
+   
 }
 
 

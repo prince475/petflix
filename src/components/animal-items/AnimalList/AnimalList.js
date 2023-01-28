@@ -18,13 +18,13 @@ function AnimalList() {
 
   const details = animals.map((animal) => {
     return (
-      
-       <div >
-          <div className="pets">
+
+       <div>
             <div key={animal.id} >
-                <div className="pet">
+            <div className="pets">
+                <div className="pet-list-card">
                     <div className="image" >
-                          <img  className="card-img" src={animal.photos.map((pic) => pic.small)} alt="{animal image}"/>
+                          <img  className="petlist-img" src={animal.photos.map((pic) => pic.small)} alt="{animal image}"/>
                     </div>
                 <div className="name">
                       <h3>{animal.name}</h3>

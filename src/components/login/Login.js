@@ -29,7 +29,7 @@ export default function Login({setToken}) {
 
     return (
         <div className="login-wrapper">
-            <h1>Petflix</h1>
+            <h1 className="login-h1">Petflix</h1>
             <div className="login-card">
                 <div className="j-left">
                     <div>
@@ -53,7 +53,7 @@ export default function Login({setToken}) {
                             className="login-password"
                             
                             />
-                        <button className="l-btn">Login</button>
+                        <button className="l-btn">LOGIN</button>
                         
                         </form>
                     </div>
