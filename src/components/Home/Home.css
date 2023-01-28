@@ -1,7 +1,14 @@
 * {
-    padding: 1px;
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
     background-color: var(--BodyColor);
+    box-sizing: border-box;
+    
+  }
+
+  body{
+    max-width: 100%;
+  
   }
   
   .intro {
@@ -28,28 +35,23 @@
     font-weight: 600;
     font-size: 3.5rem;
     margin-top: 6rem;
+    margin-left: 1rem;
   }
   
   .i-name > :nth-child(2) {
     color: var(--FirstColor);
     font-weight: 600;
     font-size: 3.5rem;
-    margin-top: -1.5rem;
+    margin-top: -1rem;
+    margin-left: 1rem;
   }
   
   .i-name > :nth-child(3) {
     font-weight: 100;
     font-size: 30px;
     color: var(--SecondColor);
-  }
-  
-  .i-button {
-    width: 6rem;
-    height: 2rem;
-  }
-  
-  h1 {
-    font-size: 45px;
+    margin-left: 1rem;
+    margin-top: -1rem;
   }
   
   .i-right {
@@ -64,8 +66,9 @@
   
   .i-right > :nth-child(1) {
     transform: scale(0.69);
-    left: -15;
-    top: -9%;
+    left: -20%;
+    top: 7%;
+    
   }
   
   .i-right > :nth-child(2) {
@@ -79,7 +82,7 @@
     left: 28px;
   }
   
-  .button {
+  #home-btn {
     background-color: var(--SecondColor);
     color: white;
     font-size: 20px;
@@ -89,11 +92,25 @@
     height: 50px;
     width: 150px;
     margin-top: -0.8rem;
+    margin-left: 1rem;
   }
   
-  .button:hover {
+  #home-btn:hover {
     background-color: var(--FirstColor);
   }
+
+#home-img {
+    position: absolute;
+    height: 650px;
+    width: 950px;
+    object-fit: cover;
+    margin-right: -5rem;
+    margin-top: -5rem;
+  }
+
+
+
+ /*-- 
   
   .cardDiv {
     position: relative;
@@ -168,13 +185,8 @@
     font-size: 13px;
   }
   
-  img {
-    position: absolute;
-    height: 650px;
-    width: 950px;
-    top: 0;
-    bottom: 0;
-    -o-object-fit: cover;
-       object-fit: cover;
-    margin-right: -1rem;
-  }
+
+
+  --*/
+
+
