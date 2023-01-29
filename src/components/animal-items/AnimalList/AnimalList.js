@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import "./AnimalList.css"
+import AnimalListItem from "./AnimalListItem"
 
 function AnimalList() {
 
@@ -14,53 +15,33 @@ function AnimalList() {
     console.log(data)
   })
   }, [])
-  
 
   const details = animals.map((animal) => {
     return (
-
-       <div>
-            <div key={animal.id} >
-            <div className="animal-wrapper">
-                <div className="pet-list-card">
-                    <div className="image" >
-                          <img  className="petlist-img" src={animal.photos.map((pic) => pic.small)} alt="{animal image}"/>
-                    </div>
-                <div className="name">
-                      <h3>{animal.name}</h3>
-                </div>
-               
-                    <h4>{animal.age}</h4> 
-                    <h4>{animal.breeds.primary}</h4>
-                
-            </div>
-          </div>
-        </div> 
-      </div>
-       
-
-
-   
-     
-  
+      <AnimalListItem 
+        key={animal.id} 
+        photo={animal.photos.map((pic) => pic.small)}
+        name={animal.name}
+        age={animal.age}
+        breeds={animal.breeds.primary}
+        />
   )
 })  
-
-
-
-
-      return (
+    return (
+      <div>
         <div>
           {details}
         </div>
-        
-      );
-    }
+      </div>
+    );
+  }
 export default AnimalList;
 
 
 
 // import React, {useState, useEffect} from "react";
+// import "./AnimalList.css"
+// import AnimalListItem from "./AnimalListItem"
 
 // function AnimalList() {
 
@@ -88,22 +69,22 @@ export default AnimalList;
 //       });
 //     }, [])
 
-//     const list = animals.map((animal) => {
-//       return (
-  
-//         <div key={animal.id}>
-//             <ul>
-//                 <div>{animal.name}</div>
-//                  <div>
-//             </ul>
-//         </div>
-//       )
-//     })
-    
+//    const details = animals.map((animal) => {
+//     return (
+//       <AnimalListItem 
+//         key={animal.id} 
+//         photo={animal.photos.map((pic) => pic.small)}
+//         name={animal.name}
+//         age={animal.age}
+//         breeds={animal.breeds.primary}
+//         />
+//   )
+// })  
 //       return (
 //         <div>
-//           {list}
+//           {details}
 //         </div>
+        
 //       );
 //     }
 // export default AnimalList;
