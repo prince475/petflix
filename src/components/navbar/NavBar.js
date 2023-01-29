@@ -48,7 +48,7 @@ function NavBar(){
         />
         <button type="submit"><AiOutlineSearch/></button>
       </form>
-       <button type="login"><BsFillPersonFill/></button>
+       <button tclassName="logout-btn" type="logout">Logout</button>
 
       </div>
     </div>

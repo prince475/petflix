@@ -26,13 +26,10 @@ body{
     margin-bottom: 2em;
     padding: 2em;
     border-radius: 18px;
-    box-shadow: 1em 1em 6em rgba(243, 166, 107, 0.8);
+    box-shadow: 1em 2em 2.5em rgba(239, 124, 58, 0.1);  
     
 }
 
-.card-body:hover{
-    transform: scale(1.1);
-}
 
 .card-title{
     color: var(--FirstColor);
@@ -67,23 +64,23 @@ p .title_end{
 /*--button--*/
 
 #visitBtn{
-    
-    background: var(--SecondColor);
     color:#fff;
     font-family: inherit;
     border-radius: 28px;
     padding: 12px 30px;
-    border: none;
-    font-weight: bold;
-    font-size: 15px;
+    border-color: var(--FirstColor);
+    font-weight: 900;
+    font-size: 18px;
     box-shadow: 1em 2em 2.5em rgba(1, 1, 50, 0.1);
     cursor: pointer;
     font-family: inherit;
     letter-spacing: 1px;
     
+    
 }
  #visitBtn:hover{
-    background-color: var(--FirstColor);
+    background-color: var(--SixthColor);
     color:#fff;
+    transform: scale(1.1);
  }
 

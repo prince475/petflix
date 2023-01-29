@@ -12,7 +12,7 @@
   flex: 1;
   align-items: center;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .n-name {
@@ -39,7 +39,7 @@
 
 .n-list>ul {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-right: 4rem;
   color: var(--SecondColor);
   font-weight: 400;
@@ -81,14 +81,15 @@ button[type="submit"]:hover {
   
 }
 
-button[type="login"] {
+button[type="logout"] {
   color: var(--FirstColor);
-  font-size: 2rem;
+  font-size: 1.3rem;
   border: none;
   cursor: pointer;
+  
 }
 
-button[type="login"]:hover {
+button[type="logout"]:hover {
   color: var(--SecondColor);
   
 }

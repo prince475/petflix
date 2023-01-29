@@ -32,7 +32,7 @@
     box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
     display: flex;
     flex-direction: column;
-    padding: 10px 10px 0px;
+    padding: 10px 10px 10px;
     border-radius: 10px;
     transition: .3s;
     float: left;
@@ -74,15 +74,42 @@ h4{
    
 }
 .animal-list-item-button{
-    border-radius: 10px;
-    background-color: rgba(0,0,0,16);
+    border-radius: 25px;
+    background-color: var(--SecondColor);
     font-size: 20px;
-    color: bisque;
+    color: #fff;
     cursor: pointer;
     margin: 5px;
     padding: 10px;
+    border: none;
 }
 
+.animal-list-item-button:hover{
+    background-color: var(--FirstColor);
+}
+
+.animal-card-close-btn{
+    background: var(--FirstColor);
+    color:#fff;
+    font-family: inherit;
+    border-radius: 28px;
+    padding: 12px 30px;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 1em 2em 2.5em rgba(1, 1, 50, 0.1);
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 1px;
+    margin:10px;
+    
+
+}
+
+.animal-card-close-btn:hover{
+    background: var(--SecondColor);
+    transform: scale(1.1);
+}
 
 
 

@@ -25,5 +25,6 @@ body{
 a{
   text-decoration: none;
   color: var(--SecondColor);
-  background-color: none;
+  background-color: transparent;
 }
+
