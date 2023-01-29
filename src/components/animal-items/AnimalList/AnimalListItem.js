@@ -17,14 +17,14 @@ function AnimalListItem({ photo, name, age, breeds, item, callback}) {
                 <div className="animal-wrapper" >
                     <div className="pet-list-card">
                         <div className="image" >
-                            <img  className="petlist-img" src={photo} alt="{animal image}"/>
+                            <img  className="pet-list-img" src={photo} alt="{animal image}"/>
                         </div>
                         <div className="name">
                             <h3>{name}</h3>
                         </div>
                         <h4>{age}</h4> 
                         <h4>{breeds}</h4>
-                        <button onClick={() => sendToParent(item)}>View Details</button>
+                        <button className="animal-list-item-button" onClick={() => sendToParent(item)}>View Details</button>
                     </div>
                 </div>
             </div> 
