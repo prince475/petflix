@@ -41,7 +41,7 @@ function AnimalData() {
   const animalElems = animals.map((animal) => 
     <AnimalListItem 
     key={animal.id} 
-    photo={animal.photos.map((pic) => pic.small)}
+    photos={animal.photos.map((pic) => pic.small)}
     name={animal.name}
     age={animal.age}
     breeds={animal.breeds.primary}
@@ -54,7 +54,7 @@ function AnimalData() {
     <div>
       { (item.name === undefined) ? 
           animalElems :
-          <AnimalCard name={item.name} photo={item.photos.map((pic) => pic.small)} age={item.age} breeds={item.breeds.primary} gender={item.gender} country={item.country} email={item.email} description={item.description} tags={item.tags} status={item.status} goBackCallback={goBackCallback} item={item}/>
+          <AnimalCard name={item.name} photos={item.photos.map((pic) => pic.small)} age={item.age} breeds={item.breeds.primary} gender={item.gender} country={item.contact.address.country} email={item.contact.email} description={item.description} tags={item.tags} status={item.status} goBackCallback={goBackCallback} item={item}/>
       }
     </div>
   );

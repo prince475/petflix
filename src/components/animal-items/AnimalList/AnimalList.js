@@ -20,7 +20,7 @@ function AnimalList() {
     return (
       <AnimalListItem 
         key={animal.id} 
-        photo={animal.photos.map((pic) => pic.small)}
+        photos={animal.photos.map((pic) => pic.small)}
         name={animal.name}
         age={animal.age}
         breeds={animal.breeds.primary}

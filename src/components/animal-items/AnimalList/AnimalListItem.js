@@ -1,7 +1,7 @@
 import React from "react";
 import "./AnimalList.css"
 
-function AnimalListItem({ photo, name, age, breeds, item, callback}) {
+function AnimalListItem({ photos, name, age, breeds, item, callback}) {
     
     const state = {
         animals: []
@@ -17,7 +17,7 @@ function AnimalListItem({ photo, name, age, breeds, item, callback}) {
                 <div className="animal-wrapper" >
                     <div className="pet-list-card">
                         <div className="image" >
-                            <img  className="pet-list-img" src={photo} alt="{animal image}"/>
+                            <img  className="pet-list-img" src={photos} alt="{animal image}"/>
                         </div>
                         <div className="name">
                             <h3>{name}</h3>

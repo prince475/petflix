@@ -46,3 +46,4 @@ export default function AnimalCard({photos, breeds, name, gender, country, email
 
 
 
+
