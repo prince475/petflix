@@ -31,9 +31,6 @@ function NavBar(){
           <li>
             <NavLink to="/organization" exact activeClassName="active-link">Organization</NavLink>
           </li>
-          <li>
-            <NavLink to="/type" exact activeClassName="active-link">Type</NavLink>
-          </li>
         </ul>
       </div>
       <form>
