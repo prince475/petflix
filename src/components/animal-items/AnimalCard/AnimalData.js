@@ -46,6 +46,7 @@ function AnimalData() {
     age={animal.age}
     breeds={animal.breeds.primary}
     item={animal} 
+    tags={animal.tags.map((list) => <li>{list}</li>)}
     callback={callback} 
     /> )
 
@@ -54,11 +55,7 @@ function AnimalData() {
     <div>
       { (item.name === undefined) ? 
           animalElems :
-<<<<<<< HEAD
-          <AnimalCard name={item.name} photos={item.photos.map((pic) => pic.small)} age={item.age} breeds={item.breeds.primary} gender={item.gender} country={item.contact.address.country} email={item.contact.email} description={item.description} tags={item.tags} status={item.status} goBackCallback={goBackCallback} item={item}/>
-=======
-          <AnimalCard name={item.name} age={item.age} breeds={item.breeds.primary} gender={item.gender} country={item.country} email={item.email} description={item.description} tags={item.tags.map((list) => <li>{list}</li>)} status={item.status} goBackCallback={goBackCallback} item={item}/>
->>>>>>> 9a79d69b89769457d047672da30997daf83bfd5a
+          <AnimalCard name={item.name} photos={item.photos.map((pic) => pic.small)} age={item.age} breeds={item.breeds.primary} gender={item.gender} country={item.contact.address.country} email={item.contact.email} description={item.description}  tags={item.tags.map((list) => <li>{list}</li>)} status={item.status} goBackCallback={goBackCallback} item={item}/>
       }
     </div>
   );

@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Switch} from "react-router-dom"
 import Login from '../login/Login';
 import Home from '../home/Home';
-import NavBar from '../navBar/NavBar'
+import NavBar from '../navbar/NavBar';
 import AnimalData from '../animal-items/AnimalCard/AnimalData';
 
 import AnimalOrganizationData from '../organization-items/AnimalOrganizationData'

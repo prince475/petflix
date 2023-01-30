@@ -1,7 +1,7 @@
 import React from "react";
 import './AnimalCard.css'
 
-export default function AnimalCard({breeds, name, gender, country, email, description, tags, status, goBackCallback, item}) {
+export default function AnimalCard({photos, breeds, name, gender, country, email, description, tags, status, goBackCallback, item}) {
 
     const sendDataToParent = (action,item) => { 
         goBackCallback({action:action, item:item})
@@ -12,6 +12,9 @@ export default function AnimalCard({breeds, name, gender, country, email, descri
                 <div>
                     <div className="card">
                         <div>
+                        <div>
+                                <img className="pet-img" src={photos} alt="{Image}"/>
+                            </div>
                             <div className="card-right">
                                 <div className="pet-listing">
                                     <p className="card-text"><span className="title_start"></span><span className="animal-title">{name}</span></p>
