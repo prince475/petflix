@@ -108,7 +108,7 @@ h4{
 
 .animal-card-close-btn:hover{
     background: var(--SecondColor);
-    transform: scale(1.1);
+    
 }
 
 
