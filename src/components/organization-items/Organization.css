@@ -3,7 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: aliceblue;
+   
     
 }
 
@@ -16,24 +16,8 @@ body{
     
 }
 
-#visitBtn{
-    background-color: var(--SecondColor);
-    color: white;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 1px 25px;
-    border:none;
-    height: 40px;
-    width: 120px;
-    margin-top: -0.8rem;
-    border-radius: 28px;
-    align-items: center;
-}
- #visitBtn:hover{
-    background-color: var(--FirstColor);
- }
 
-.card{
+.card-body{
     background-color: white;
     max-width: 40em;
     max-height: fit-content;
@@ -42,22 +26,22 @@ body{
     margin-bottom: 2em;
     padding: 2em;
     border-radius: 18px;
-    box-shadow: 1em 1em 6em rgba(243, 166, 107, 0.8);
+    box-shadow: 1em 2em 2.5em rgba(239, 124, 58, 0.1);  
     
 }
 
-.card:hover{
-    transform: scale(1.1);
-}
 
 .card-title{
-    color: var(--FirstColor)
+    color: var(--FirstColor);
+    font-size: 30px;
 }
 
 #contact{
     color:var(--FirstColor);
     font-size:20px;
 }
+
+/*--Description--*/
 
 p{
     margin-top: -0.8rem;
@@ -73,15 +57,30 @@ p .title_start{
 p .title_end{
     color: var(--SecondColor);
     font-weight: 600;
-    font-size:15px;
-    margin-top: -2rem;
-
+    font-size:17px;
 }
 
-h1{
-    font-size: 30px;
-}
 
-a{
-    color: white;
+/*--button--*/
+
+#visitBtn{
+    color:#fff;
+    font-family: inherit;
+    border-radius: 28px;
+    padding: 12px 30px;
+    border-color: var(--FirstColor);
+    font-weight: 900;
+    font-size: 18px;
+    box-shadow: 1em 2em 2.5em rgba(1, 1, 50, 0.1);
+    cursor: pointer;
+    font-family: inherit;
+    letter-spacing: 1px;
+    
+    
 }
+ #visitBtn:hover{
+    background-color: var(--SixthColor);
+    color:#fff;
+    transform: scale(1.1);
+ }
+

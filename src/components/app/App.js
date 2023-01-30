@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import './App.css';
-import { BrowserRouter, Route, Switch} from "react-router-dom"
+import { Route, Switch} from "react-router-dom"
 import Login from '../login/Login';
-import Home from '../Home/Home';
-import NavBar from '../NavBar/NavBar';
+import Home from '../home/Home';
+import NavBar from '../navbar/NavBar';
+import AnimalData from '../animal-items/AnimalCard/AnimalData';
+
+import AnimalOrganizationData from '../organization-items/AnimalOrganizationData'
 
 
 
@@ -16,18 +19,18 @@ function App() {
 
 
   return (
-    <div className='wrapper'>
-      {/* <h1>Petflix</h1> */}
-      <BrowserRouter>
-      <NavBar  />
+    <>
+     <NavBar  />
+     <div className='wrapper'>
       <Switch>
-          {/* <Route path="/"> <NavBar /> </Route> */}
-          <Route path="/"> <Home /> </Route>
-
+          <Route exact path="/animals"><AnimalData/></Route>
+          <Route exact path="/organization" > <AnimalOrganizationData/> </Route>
+          {/* <Route exact path="/type" > <Breeds/> </Route> */}
+          <Route exact path="/"> <Home /> </Route>
         </Switch>
-        
-      </BrowserRouter>
     </div>
+    </>
+   
   );
 }
 

@@ -5,8 +5,10 @@ import './Organization.css'
 function AnimalOrganizationDetails({name, email, phone, city, state, postcode, country, url, animalLink, selfLink}) {
 
     return (
+        
         <div className="col-12 p-1">
-            <div className="card h-100">
+            
+            <div >
                 <div className="card-body">
                     <h1 className="card-title">{name}</h1>
 

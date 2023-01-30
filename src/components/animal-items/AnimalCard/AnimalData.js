@@ -1,8 +1,32 @@
 import React, { useEffect, useState } from "react";
 import AnimalCard from "./AnimalCard"
+import AnimalListItem from "../AnimalList/AnimalListItem";
+
 
 function AnimalData() {
   const [animals, setAnimals] = useState([])
+
+  const [selected, setSelected] = useState([])
+
+  const [item, setItem] = useState({})
+
+  const callback = payload => {
+    console.log(payload)
+    setItem(payload.animals[0])
+    console.log(item)
+  }
+
+  const goBackCallback = payload => {
+    console.log(payload)
+    if(payload.action === "close") {
+      setItem({})
+    } else if(!selected.includes(payload.item)) {
+      let item = {}
+      animals.forEach(data => { if(data.id === payload.item.id){item = data}})
+      setSelected(current => [...current, item])
+      setItem({})
+    }
+  }
 
   const API = "https://api.npoint.io/61de2641c6b0c40684e2"
   useEffect(() => {
@@ -14,30 +38,30 @@ function AnimalData() {
     })
   }, [])
 
-  const details = animals.map((animal) => {
-        return (
-          <AnimalCard   
-          key={animal.id}
-          breeds={animal.breeds.primary} 
-          name={animal.name} 
-          gender={animal.gender}
-          photos={animal.photos.map((pic) => pic.medium)}
-          country={animal.contact.address.country}
-          email={animal.contact.email}
-          description={animal.description}
-          tags={animal.tags.map((tag) => <ol key={tag}>{tag}</ol>)}
-          status={animal.status}
-          /> 
-  )
-})
+  const animalElems = animals.map((animal) => 
+    <AnimalListItem 
+    key={animal.id} 
+    photos={animal.photos.map((pic) => pic.small)}
+    name={animal.name}
+    age={animal.age}
+    breeds={animal.breeds.primary}
+    item={animal} 
+    tags={animal.tags.map((list) => <li>{list}</li>)}
+    callback={callback} 
+    /> )
 
 
   return (
     <div>
-      {details}
+      { (item.name === undefined) ? 
+          animalElems :
+          <AnimalCard name={item.name} photos={item.photos.map((pic) => pic.small)} age={item.age} breeds={item.breeds.primary} gender={item.gender} country={item.contact.address.country} email={item.contact.email} description={item.description}  tags={item.tags.map((list) => <li>{list}</li>)} status={item.status} goBackCallback={goBackCallback} item={item}/>
+      }
     </div>
   );
 }
+
+export default AnimalData;
 
 // import React, { useEffect, useState } from 'react';
 // import AnimalCard from "./AnimalCard"
@@ -93,4 +117,4 @@ function AnimalData() {
 //   );
 // }
 
-export default AnimalData;
+//export default AnimalData;

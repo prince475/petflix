@@ -12,7 +12,7 @@
   flex: 1;
   align-items: center;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .n-name {
@@ -23,7 +23,6 @@
   font-family: 'Gloria Hallelujah', cursive;
   
 }
-
 
 .n-right {
   display: flex;
@@ -40,7 +39,7 @@
 
 .n-list>ul {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-right: 4rem;
   color: var(--SecondColor);
   font-weight: 400;
@@ -70,50 +69,41 @@ input[type="text"]{
   border-color: var(--FirstColor);
 }
 
-/*--icon button--*/
-
-.nav-search-btn{
-  color: var(--FirstColor);
-  border: none;
-  outline: none;
-  font-size: 25px;
-  background-color: transparent;
-}
-
-.nav-search-btn:hover{
-  color: var(--FirstColor)
-}
-
-.logout-btn{
-  color: var(--FirstColor);
-  border: none;
-  outline: none;
-  font-size: 18px;
-  background-color: transparent;
-}
-
-.logout-btn:hover{
+button[type="submit"] {
   color: var(--SecondColor);
-  background-color: transparent;
-  border-radius: 28px;
+  font-size: 2rem;
+  padding: 10px 10px 10px 10px;
+  border: none;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  color: var(--FirstColor);
+  
 }
 
+button[type="logout"] {
+  color: var(--FirstColor);
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+  
+}
 
+button[type="logout"]:hover {
+  color: var(--SecondColor);
+  
+}
 
 /*--Link part--*/
 .active-link {
   color: var(--FirstColor);
   font-weight: bold;
-  background-color: transparent;
 }
 
-.active-link:hover{
-  color: var(--SecondColor);
-  background-color: transparent;
+li{
+  color: var(--SecondColor)
 }
 
-
-
-
-
-
+li:hover{
+  color: var(--FirstColor)
+}

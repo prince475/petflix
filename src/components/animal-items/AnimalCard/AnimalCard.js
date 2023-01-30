@@ -1,20 +1,23 @@
 import React from "react";
 import './AnimalCard.css'
 
-export default function AnimalCard({photos, breeds, name, gender, country, email, description, tags, status }) {
-   
+export default function AnimalCard({photos, breeds, name, gender, country, email, description, tags, status, goBackCallback, item}) {
+
+    const sendDataToParent = (action,item) => { 
+        goBackCallback({action:action, item:item})
+    };
+
 
     return (
-                <div className="container">
+                <div>
                     <div className="card">
-                        <div className="card-left">
-                            <div>
+                        <div>
+                        <div>
                                 <img className="pet-img" src={photos} alt="{Image}"/>
                             </div>
                             <div className="card-right">
                                 <div className="pet-listing">
-                                    {/*<h1>{type}</h1>*/}
-                                    <p className="card-text"><span className="title_start"></span><span className="title">{name}</span></p>
+                                    <p className="card-text"><span className="title_start"></span><span className="animal-title">{name}</span></p>
 
                                     <p className="card-title"><span className="title_start">Breed:</span><span className="title_end p-2">{breeds}</span></p>
 
@@ -26,19 +29,21 @@ export default function AnimalCard({photos, breeds, name, gender, country, email
                 <div>
                     <h6><u id="contact">Contact:</u></h6>
                     
-                    <p><span className="title_start">Country:</span><span className="country">{country}</span></p>
-                    <p><span className="title_start">Email:</span><span className="email">{email}</span></p>
+                    <p><span className="title_start">Country:</span><span className="title_start">{country}</span></p>
+                    <p><span className="title_start">Email:</span><span className="title_start">{email}</span></p>
                 </div>
             </div>
             </div>
             
             <p className="card-text"><span className="title_start">Status:</span><span className="status">{status}</span></p>
             <button className="adoptBtn">ADOPT</button>
+            <button className="animal-card-close-btn"onClick={() => sendDataToParent("go back",item)}>CLOSE</button>
         </div>
     </div>
     </div>
     )
 }
+
 
 
 
