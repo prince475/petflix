@@ -8,7 +8,8 @@
 3. [Project Setup](#project-setup)
     - [Installations](#installations)
     - [Access](#access)
-4. [Authors](#author)
+    - [Challenges](#challenges)
+4. [Authors](#authors)
 5. [License](#license)
  
 
@@ -42,6 +43,10 @@ The following deliverables will earn you extra points:
 - When the user loads the page, they will see a login page.
 - After logining in, the user will be diverted to the hompage
 - The homepage has a navbar that displays website to adopt animals
+- When you click on Animals on the navbar, it takes you to a page that has a list of animals 
+- The animals card has a view details button that diplays a detailed page of each animal
+- When you click on Organizations on the navbar, it takes you to a page that has a list of organisations
+- The organization's card has a visit button that directs you to the organizations website
 
 
 ## Project Setup
@@ -72,7 +77,7 @@ To access this project on you local computer, follow the steps below
 
 To access the content on the browser:
 
-* click on this deployed link from vercel ()
+* click on this deployed link from vercel (https://petflix-chi.vercel.app/)
 
   * or
 
@@ -80,8 +85,13 @@ To access the content on the browser:
 
 * Run <code>npm start</code> on your terminal to start the backend json server to view it in your browser.
 
+### Challenges
+In order to access the API used to fetch the data, an account needs to be created with PetFinder (https://www.petfinder.com/developers/v2/docs/). The Challenge is you are provided with a token that expires after 60 minutes. You are then required to generate a new token. Multiple regeneration of tokens results in a "access to fetch blocked by CORS policy" error. 
 
-# Author
+The solution to this is storing the fetched data online. (https://www.npoint.io/) was used in this project to store the JSON data.
+
+
+# Authors
 
 This project was contributed to by: 
 * [Prince Daniel](https://github.com/prince475)
