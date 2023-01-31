@@ -12,7 +12,7 @@ export default function AnimalCard({photos, breeds, name, gender, country, email
                 <div>
                     <div className="card">
                         <div>
-                        <div>
+                             <div>
                                 <img className="pet-img" src={photos} alt="{Image}"/>
                             </div>
                             <div className="card-right">

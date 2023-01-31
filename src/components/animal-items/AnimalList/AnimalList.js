@@ -15,7 +15,11 @@ function AnimalList() {
     console.log(data)
   })
   }, [])
+  function handleSearch(value){
+    const updatedAnimals = animals.filter(animal=> animal.breeds.primary.toLowerCase().includes(value.toLowerCase()))
+    setAnimals(updatedAnimals)
 
+  }
   const details = animals.map((animal) => {
     return (
       <AnimalListItem 

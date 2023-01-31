@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import './App.css';
-import { Route, Switch} from "react-router-dom"
+// import { Route, Switch} from "react-router-dom"
 import Login from '../login/Login';
-import Home from '../home/Home';
+// import Home from '../home/Home';
 import NavBar from '../navbar/NavBar';
-import AnimalData from '../animal-items/AnimalCard/AnimalData';
+import Footer from '../footer/Footer';
+// import AnimalData from '../animal-items/AnimalCard/AnimalData';
 
-import AnimalOrganizationData from '../organization-items/AnimalOrganizationData'
+// import AnimalOrganizationData from '../organization-items/AnimalOrganizationData'
 
 
 
@@ -21,13 +22,9 @@ function App() {
   return (
     <>
      <NavBar  />
+     <Footer />
      <div className='wrapper'>
-      <Switch>
-          <Route exact path="/animals"><AnimalData/></Route>
-          <Route exact path="/organization" > <AnimalOrganizationData/> </Route>
-          {/* <Route exact path="/type" > <Breeds/> </Route> */}
-          <Route exact path="/"> <Home /> </Route>
-        </Switch>
+      
     </div>
     </>
    
