@@ -1,9 +1,36 @@
 import React from "react"
+import AnimalList from "../animal-items/AnimalList/AnimalList"
 import './Home.css'
+import AnimalListItem from "../animal-items/AnimalList/AnimalListItem"
 
 
 
-const Home= () => {
+
+const Home = ({animals, isHome}) => {
+    if (!isHome) {
+        const details = animals?.map((animal) => {
+
+            return (
+              <AnimalListItem 
+                key={animal.id} 
+                photos={animal.photos.map((pic) => pic.small)}
+                name={animal.name}
+                age={animal.age}
+                breeds={animal.breeds.primary}
+                />
+          )
+        })
+          
+            return (
+              <div>
+                <div>
+
+                  {details}
+                </div>
+              </div>
+            );
+          }
+        
     return(
                 <div className="intro">
                 <div className="i-left">
